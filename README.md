@@ -19,6 +19,11 @@ This batch script checks if a `log.txt` marker file exists in the `C:\Windows\Te
 This script is used to delete the `log.txt` marker file.
 
 ### Implementation Steps
+**precondition**
+   - Modify RDP Settings: Ensure RDPWrap is functional and configured to disable the restriction of Remote Desktop Service users to a single session:
+
+   - reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fSingleSessionPerUser /t REG_DWORD /d 0 /f
+   - This command disables the limitation that restricts Remote Desktop Service users to a single session, which is crucial for creating multiple hidden sessions.
 
 1. **Download the Scripts**: Download and place `handoff.bat` and `delete.bat` in a location that's hard to find.
    
