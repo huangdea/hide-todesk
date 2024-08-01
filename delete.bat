@@ -1,0 +1,1 @@
+del "C:\Windows\Temp\log.txt"  
